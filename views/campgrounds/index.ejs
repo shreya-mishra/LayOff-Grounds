@@ -7,6 +7,8 @@
 <div class="container">
   <h1
     style="
+      color: white;
+
       margin: 50px;
       font-size: 50;
       font-family: 'Times New Roman', Times, serif;
@@ -16,7 +18,7 @@
     ALL CAMPGROUNDS
   </h1>
   <% for (let campground of campgrounds){%>
-  <div class="card mb-3">
+  <div class="card mb-3" style="background-color: #bdbdbd">
     <div class="row">
       <div class="col-md-4">
         <% if(campground.images.length) {%>
