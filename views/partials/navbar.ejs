@@ -1,6 +1,6 @@
 <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">LayOff! </a>
+    <a class="navbar-brand" href="/">LayOff! </a>
     <button
       class="navbar-toggler"
       type="button"
@@ -20,6 +20,8 @@
       </div>
       <div class="navbar-nav ml-auto">
         <% if(!currentUser) {%>
+        <a class="nav-link" href="/adminlogin">Guest Login</a>
+
         <a class="nav-link" href="/login">Login</a>
         <a class="nav-link" href="/register">Register</a>
         <% } else {%>

@@ -96,8 +96,25 @@
               name="image"
               multiple
             />
+            <script>
+              document
+                .querySelector(".form-file-input")
+                .addEventListener("change", function (e) {
+                  const selecetdFiles =
+                    document.querySelector(".form-file-input").files;
+                  const selectedFilesArray = Object.values(selecetdFiles);
+                  const nameArray = [];
+                  selectedFilesArray.map((item) => nameArray.push(item.name));
+                  var fileName =
+                    document.querySelector(".form-file-input").files[0].name;
+                  document.getElementById("form-file-name").innerHTML =
+                    nameArray.join(",");
+                });
+            </script>
+
             <label class="form-file-label" for="image">
               <span
+                id="form-file-name"
                 style="background-color: #bdbdbd; color: black"
                 class="form-file-text custom-file-label"
                 >Choose image(s)...</span
